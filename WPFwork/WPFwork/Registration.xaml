@@ -1,0 +1,25 @@
+﻿<Window x:Class="WPFwork.Registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:WPFwork"
+        mc:Ignorable="d"
+        Title="Регистрация" Height="450" Width="800">
+    <Grid>
+		<Border MinWidth="400" Margin="15" Background="White" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20">
+			<Border.Effect>
+				<DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"/>
+			</Border.Effect>
+			<StackPanel>
+				<TextBlock Text="Регистрация" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"/>
+				<TextBox x:Name="textboxRegLogin" materialDesign:HintAssist.Hint="Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+				<PasswordBox x:Name="passwordboxRegPassword" materialDesign:HintAssist.Hint="Введите пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
+				<Button x:Name="buttonRegistrationReg" Content="Зарегистрироваться" Click="buttonRegistrationReg_Click" Margin="10"/>
+				<Button x:Name="buttonCloseReg" Content="Закрыть" Click="buttonCloseReg_Click" Margin="10"/>
+
+			</StackPanel>
+		</Border>
+	</Grid>
+</Window>
